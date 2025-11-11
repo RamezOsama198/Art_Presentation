@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض تقديمي عن التصميم والرسم</title>
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* خط مخصص لتحسين العرض باللغة العربية */
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        /* إخفاء الشرائح بشكل افتراضي */
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out; /* تأثير الانتقال */
+        }
+        
+        /* إظهار الشريحة النشطة */
+        .slide.active {
+            display: flex; /* نستخدم flex للمساعدة في التوسيط */
+            flex-direction: column;
+            justify-content: center;
+            opacity: 1;
+            animation: fadeIn 0.5s ease-in-out; /* تأثير الدخول */
+        }
+
+        /* إطار للصور النائبة */
+        .placeholder-image {
+            background-color: #e0e7ff; /* لون أزرق باهت */
+            border: 2px dashed #a5b4fc; /* إطار متقطع */
+            color: #4338ca; /* لون النص */
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            min-height: 150px; /* ارتفاع أدنى */
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- حاوية العرض التقديمي -->
+    <div class="w-full max-w-4xl bg-white shadow-2xl rounded-xl overflow-hidden">
+        
+        <!-- منطقة عرض الشرائح -->
+        <div class="p-8 md:p-12 min-h-[450px] md:min-h-[550px] flex flex-col justify-center">
+
+            <!-- الشريحة 1: العنوان -->
+            <div class="slide active text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-indigo-700 mb-4">مبادئ التصميم الداخلي والرسم</h1>
+                <p class="text-xl md:text-2xl text-gray-600">عرض تقديمي يغطي الأسس والمفاهيم</p>
+                <div class="mt-8">
+                    <div class="placeholder-image"><img src="task1pp.png"></div>
+                </div>
+            </div>
+
+            <!-- الشريحة 2: توزيع الأثاث وتناسق الألوان -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-6">1. توزيع الأثاث وتناسق الألوان</h2>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li><span class="font-bold">التوزيع الوظيفي:</span> ترتيب الأثاث بناءً على الاستخدام وتسهيل الحركة.</li>
+                    <li><span class="font-bold">خلق نقاط محورية:</span> مثل مدفأة، لوحة فنية، أو شاشة تلفاز.</li>
+                    <li><span class="font-bold">نظرية الألوان:</span> استخدام عجلة الألوان لخلق تناغم (متماثل، متباين، تكميلي).</li>
+                    <li><span class="font-bold">تأثير الألوان:</span> الألوان الدافئة (للراحة) والباردة (للاتساع والهدوء).</li>
+                    <li>دراسة مسارات الحركة (Circulation) لضمان عدم إعاقة الأثاث لها.</li>
+                </ul>
+                <div class="mt-4 text-center">
+                    <div class="placeholder-image"><img src="2pp.png"></div>
+                </div>
+            </div>
+
+            <!-- الشريحة 3: فرش المساحات المفتوحة بالشبكات -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-6">2. فرش المساحات المفتوحة بالشبكات</h2>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li><span class="font-bold">المساحات المفتوحة (Open Plan):</span> دمج عدة وظائف (مطبخ، طعام، معيشة) في فراغ واحد.</li>
+                    <li><span class="font-bold">استخدام الشبكات (Grids):</span> تقسيم الفراغ وهمياً لتنظيم توزيع الأثاث.</li>
+                    <li><span class="font-bold">تحديد المناطق:</span> استخدام السجاد، الأثاث، أو الإضاءة لتعريف كل منطقة وظيفية.</li>
+                    <li><span class="font-bold">الحفاظ على التدفق البصري:</span> ضمان تواصل بصري مريح بين المناطق المختلفة.</li>
+                </ul>
+                <div class="mt-4 text-center">
+                   <div class="placeholder-image"><img src="3pp.png"></div>
+                </div>
+            </div>
+
+            <!-- الشريحة 4: مقاسات جسم الإنسان (الإرغونوميكس) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-6">3. مقاسات جسم الإنسان (Ergonomics)</h2>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li><span class="font-bold">الإرغونوميكس:</span> علم تصميم المنتجات لتناسب المستخدم البشري بكفاءة وراحة.</li>
+                    <li><span class="font-bold">القياسات البشرية (Anthropometrics):</span> دراسة مقاسات الجسم البشري.</li>
+                    <li><span class="font-bold">أمثلة:</span>
+                        <ul class="list-disc list-inside mr-6 mt-2">
+                            <li>ارتفاع المكتب المناسب للجلوس (70-75 سم).</li>
+                            <li>عمق مقعد الكرسي لراحة الظهر.</li>
+                            <li>ارتفاع طاولة المطبخ لسهولة العمل (85-90 سم).</li>
+                        </ul>
+                    </li>
+                    <li>الهدف: تصميم أثاث مريح، آمن، وصحي يقلل الإجهاد.</li>
+                </ul>
+                <div class="mt-4 text-center">
+                    <div class="placeholder-image"><img src="4pp.png"></div>
+                </div>
+            </div>
+
+            <!-- الشريحة 5: طرق عرض الأفكار -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-6">4. طرق عرض أفكار الفرش</h2>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li><span class="font-bold">الكولاج (Collage / Mood Board):</span> تجميع صور للخامات، الألوان، والأثاث لنقل "الإحساس العام".</li>
+                    <li><span class="font-bold">الرسم اليدوي (Sketching):</span> اسكتشات سريعة لإظهار الفكرة الأولية.</li>
+                    <li><span class="font-bold">الرسم بالماركر (Marker Rendering):</span> تلوين المناظير لإظهار الألوان والظلال بشكل احترافي.</li>
+                    <li><span class="font-bold">العرض الرقمي (Digital):</span> استخدام برامج مثل (SketchUp, 3ds Max, Photoshop) لعمل صور واقعية.</li>
+                </ul>
+                 <div class="mt-4 text-center">
+                    <div class="placeholder-image"><img src="5pp.png"></div>
+                </div>
+            </div>
+
+            <!-- الشريحة 6: الرسم المعماري -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-6">5. الرسم المعماري</h2>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li><span class="font-bold">لغة المهندسين:</span> وسيلة التواصل لنقل التصميم من الفكرة إلى التنفيذ.</li>
+                    <li><span class="font-bold">المساقط الأفقية (Plans):</span> رؤية علوية للفراغ تظهر توزيع الغرف والأثاث.</li>
+                    <li><span class="font-bold">الواجهات (Elevations):</span> رؤية جانبية للمبنى أو لجدار داخلي.</li>
+                    <li><span class="font-bold">القطاعات (Sections):</span> رؤية تخيلية "لقطع" المبنى لإظهار التفاصيل الداخلية والارتفاعات.</li>
+                    <li>يجب أن يتضمن مقياس رسم واضح (Scale) ورموز اصطلاحية (Symbols).</li>
+                </ul>
+                <div class="mt-4 text-center">
+                    <div class="placeholder-image"><img src="6pp.png"></div>
+                </div>
+            </div>
+
+            <!-- الشريحة 7: المنظور الهندسي -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-6">6. المنظور الهندسي</h2>
+                <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                    <li><span class="font-bold">محاكاة الواقع:</span> رسم الأجسام ثلاثية الأبعاد (3D) على سطح ثنائي الأبعاد (2D).</li>
+                    <li><span class="font-bold">نقطة تلاشي واحدة (One-Point):</span> لرؤية الفراغ من الأمام مباشرة (مثل النظر في ممر).</li>
+                    <li><span class="font-bold">نقطتي تلاشي (Two-Point):</span> لرؤية الفراغ من زاوية، وهو الأكثر شيوعاً في التصميم الداخلي.</li>
+                    <li>يعطي إحساساً واقعياً بالعمق، النِسَب، وكيف سيبدو الفراغ بعد التنفيذ.</li>
+                </ul>
+                <div class="mt-4 text-center">
+                    <div class="placeholder-image"><img src="7pp.png"></div>
+                </div>
+            </div>
+
+            <!-- الشريحة 8: الختام -->
+            <div class="slide text-center">
+                <h2 class="text-4xl font-bold text-indigo-700 mb-6">شكراً لكم</h2>
+                <p class="text-2xl text-gray-600">نهاية العرض التقديمي</p>
+                <p class="text-xl text-gray-500 mt-4">هل هناك أي أسئلة؟</p>
+            </div>
+
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="bg-gray-100 p-4 flex justify-between items-center border-t border-gray-200">
+            <button id="prevBtn" class="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                السابق
+            </button>
+            <div id="slideCounter" class="text-gray-700 font-medium text-sm">
+                شريحة 1 / 8
+            </div>
+            <button id="nextBtn" class="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300">
+                التالي
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        // جافاسكريبت للتحكم بالشرائح
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideCounter = document.getElementById('slideCounter');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // إخفاء جميع الشرائح
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+            
+            // إظهار الشريحة المطلوبة
+            slides[index].classList.add('active');
+            
+            // تحديث رقم الشريحة
+            // slideCounter.textContent = شريحة ${index + 1} / ${totalSlides}; // <<--------------------------------------------
+            slideCounter.textContent = `شريحة ${index + 1} / ${totalSlides}`;
+
+            // تحديث حالة الأزرار
+            prevBtn.disabled = (index === 0);
+            nextBtn.disabled = (index === totalSlides - 1);
+        }
+
+        // زر التالي
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        // زر السابق
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // إظهار الشريحة الأولى عند التحميل
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
